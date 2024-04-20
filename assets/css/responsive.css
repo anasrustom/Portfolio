@@ -227,7 +227,7 @@
 		font-size: 35px;
 	}
 	.popup_modal_content .portfolio_navigation {
-		background-color: var(--tj-theme-primary);
+		background-color: var(--theme-primary);
 		padding: 30px 25px;
 		gap: 20px;
 	}
@@ -444,7 +444,7 @@
 		font-size: 30px;
 	}
 	.popup_modal_content .portfolio_navigation {
-		background-color: var(--tj-theme-primary);
+		background-color: var(--theme-primary);
 		padding: 30px 15px;
 		gap: 15px;
 		flex-direction: column;
@@ -510,7 +510,7 @@
 	}
 
 	/* footer */
-	.tj-footer-area {
+	.footer-area {
 		padding: 60px 0 20px;
 	}
 	.footer-menu ul {

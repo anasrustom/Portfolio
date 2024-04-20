@@ -3,9 +3,9 @@
     "use strict";
 
 	$(document).ready(function ($) {
-		/*------------------------------------------------------
-  	/  Sticky Header
-  	/------------------------------------------------------*/
+		
+  	// Sticky Header
+
 		var lastScrollTop = 0;
 		$(window).scroll(function () {
 			var scroll = $(window).scrollTop();
@@ -25,9 +25,8 @@
 			lastScrollTop = scroll;
 		});
 
-	/*------------------------------------------------------
-  	/  Hamburger Menu
-  	/------------------------------------------------------*/
+	// Hamburger Menu
+
 		$(".menu-bar").on("click", function () {
 			$(".menu-bar").toggleClass("menu-bar-toggeled");
 			$(".header-menu").toggleClass("opened");
@@ -40,9 +39,7 @@
 			$("body").removeClass("overflow-hidden");
 		});
    
-	/*------------------------------------------------------
-  	/  Project Filter
-  	/------------------------------------------------------*/
+	// PROJECT SLIDER 
 		var $grid = $(".portfolio-box").isotope({
 			// options
 			masonry: {
@@ -62,9 +59,7 @@
 			$grid.isotope({ filter: filterValue });
 		});
 
-	/*------------------------------------------------------
-  	/  Project Filter BG Color
-  	/------------------------------------------------------*/
+	// Project Filter BG Color
 		function filter_animation() {
 			var active_bg = $(".portfolio-filter .button-group .active-bg");
 			var element = $(".portfolio-filter .button-group .active");
@@ -93,23 +88,49 @@
     
     });
 
+    $(window).on("load", function () {
+		// WOW JS
+			var wow = new WOW({
+				boxClass: "wow", // default
+				animateClass: "animated", // default
+				offset: 100, // default
+				mobile: true, // default
+				live: true, // default
+			});
+			wow.init();
 
+		// PRELOADER 
+			const svg = document.getElementById("preloaderSvg");
+			const tl = gsap.timeline({
+				onComplete: startStrokeAnimation,
+			});
+			const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+			const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
+			tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
+				delay: 1.5,
+				y: -100,
+				opacity: 0,
+			});
+			tl.to(svg, {
+				duration: 0.5,
+				attr: { d: curve },
+				ease: "power2.easeIn",
+			}).to(svg, {
+				duration: 0.5,
+				attr: { d: flat },
+				ease: "power2.easeOut",
+			});
+			tl.to(".preloader", {
+				y: -1500,
+			});
+			tl.to(".preloader", {
+				zIndex: -1,
+				display: "none",
+			});
 
-
-
-
-        $(window).on("load", function () {
-            var wow = new WOW({
-                boxClass: "wow", // default
-                animateClass: "animated", // default
-                offset: 100, // default
-                mobile: true, // default
-                live: true, // default
-            });
-            wow.init();
-
-			/* contact form */
-			/* !contact form */
+			function startStrokeAnimation() {
+				
+			}
         });
 })(jQuery);
