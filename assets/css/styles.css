@@ -821,6 +821,7 @@ p.lead, .cd-headline {
 
 /* my image  */
 .hero-image-box img {
+	width: 85%;
 	border-radius: 38px;
 	-webkit-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
