@@ -62,6 +62,13 @@
 		padding: 30px 15px 25px;
 	}
 
+	/* Projects section  */
+
+	.portfolio-box .image-box img{
+		width: 374.4px;
+		height: 378.99px;
+	}
+
 	/* resume section */
 	.resume-section {
 		padding-top: 100px;
@@ -233,6 +240,11 @@
 	}
 	.portfolio_navigation .navigation_item .project .nav_project .title {
 		font-size: 35px;
+	}
+
+	.portfolio-box .image-box img{
+		width: 301.2px;
+		height: 304.89px;
 	}
 
 	/* resume section */
@@ -459,6 +471,11 @@
 	.portfolio_navigation .navigation_item .project i {
 		font-size: 20px;
 		line-height: 1;
+	}
+
+	.portfolio-box .image-box img{
+		width: 480px;
+		height: 485.88px;
 	}
 
 	/* resume section */

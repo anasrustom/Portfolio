@@ -54,11 +54,34 @@
 		$(".filter-button-group").on("click", "button", function () {
 			$(".filter-button-group button").removeClass("active");
 			$(this).addClass("active");
-
+		
 			var filterValue = $(this).attr("data-filter");
+		
+			// Remove the "hide" class from all items
+			$(".portfolio-item").removeClass("hide");
+		
+			// If there are more than 4 items in the category, add the "hide" class to the 5th item onward
+			var filteredItems = $(".portfolio-item").filter(filterValue);
+			if (filteredItems.length > 4) {
+				filteredItems.slice(4).addClass("hide");
+				$(".show-more").removeClass("hide");
+			}
+			else if (filteredItems.length <= 4) {
+				$(".show-more").addClass("hide");
+			}
+		
 			$grid.isotope({ filter: filterValue });
 		});
 
+		$(".show-more").on("click", function () {
+			// Remove the "hide" class from all items
+			$(".portfolio-item").removeClass("hide");
+		
+			// Reapply the Isotope filter
+			var filterValue = $(".filter-button-group button.active").attr("data-filter");
+			$grid.isotope({ filter: filterValue });
+			$(".show-more").addClass("hide");
+		});
 	// Project Filter BG Color
 		function filter_animation() {
 			var active_bg = $(".portfolio-filter .button-group .active-bg");

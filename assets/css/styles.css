@@ -1197,6 +1197,22 @@ p.lead, .cd-headline {
 	transform: translateY(-50%) rotate(360deg);
 }
 
+.hide {
+	display: none !important;
+}
+
+.show-more {
+	width: auto;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.show-more .ar-btn-primary {
+	font-size: 22px;
+}
 /* PROJECTS END  */
 
 
@@ -1287,6 +1303,8 @@ a.resume-item:hover {
 	font-size: 20px;
 	font-weight: 800;
 	margin-bottom: 8px;
+	display: flex;
+	justify-content: space-between;
 }
 .resume-widget .resume-item:hover .time {
 	color: var(--white);
@@ -1313,6 +1331,10 @@ a.resume-item:hover {
 	color: var(--white);
 	font-size: 18px;
 	margin: 5px 0 10px 0;
+}
+
+.clickable {
+	color: gold;
 }
 /* RESUME END  */
 
