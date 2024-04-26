@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/textanimation.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/backtoTop.css">
 
@@ -152,10 +154,10 @@
                         
                         <p class="lead wow fadeInUp">I'm a passionate 
 
-                            <span class="cd-headline rotate-1" >
+                            <span id="cd-headline" class="cd-headline rotate-1" >
                                 <!-- ANIMATE TEXT VALUES: zoom, rotate-1, loading-bar, slide, clip, push,  -->
                                     <span class="cd-words-wrapper" style="display:flex;">
-                                        <b class="is-visible purple-grad">Front-end Developer</b>
+                                        <b id="main-detail" class="is-visible purple-grad">Front-end Developer</b>
                                         <b class="is-hidden purple-grad">Web Designer</b>
                                         <b class="is-hidden purple-grad">Competitive Programmer</b>
                                         <b class="is-hidden purple-grad">Software Engineer</b>
@@ -336,7 +338,7 @@
                                 <h3 class="portfolio-title">Pomodoro & To-Do List</h3>
                                 <p>A robust study tool for optimum efficiency</p>
                                 <i class="fas fa-external-link-square-alt"></i>
-                                <button data-mfp-src="#portfolio-wrapper"
+                                <button data-target="#pomodoroModal" data-mfp-src="#pomodoro-wrapper"
                                     class="portfolio-link modal-popup"></button>
                             </div>
 
@@ -348,9 +350,9 @@
                             </div>
                             <div class="content-box">
                                 <h3 class="portfolio-title">UltraVerse</h3>
-                                <p>Details soon!</p>
+                                <p>A responsive NFT marketplace that lets users explore, filter, and discover NFTs.</p>
                                 <i class="fas fa-external-link-square-alt"></i>
-                                <button data-mfp-src="#portfolio-wrapper"
+                                <button data-mfp-src="#ultraverse-wrapper"
                                     class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
@@ -361,9 +363,9 @@
                             </div>
                             <div class="content-box">
                                 <h3 class="portfolio-title">Impossible-To-Beat TicTacToe AI</h3>
-                                <p>Details soon!</p>
+                                <p>Play against a TicTacToe bot that is impossible to beat!</p>
                                 <i class="fas fa-external-link-square-alt"></i>
-                                <button data-mfp-src="#portfolio-wrapper"
+                                <button data-mfp-src="#tictactoe-wrapper"
                                     class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
@@ -374,21 +376,33 @@
                             </div>
                             <div class="content-box">
                                 <h3 class="portfolio-title">Calculator</h3>
-                                <p>Details soon!</p>
+                                <p>A powerful calculator built with React.Js's useReducer.</p>
                                 <i class="fas fa-external-link-square-alt"></i>
-                                <button data-mfp-src="#portfolio-wrapper"
+                                <button data-mfp-src="#calculator-wrapper"
+                                    class="portfolio-link modal-popup"></button>
+                            </div>
+                        </div>
+                        <div class="hide portfolio-item react web-app">
+                            <div class="image-box">
+                                <img src="assets/images/portfolio/RQG.png" width="460.8" height="465.41" alt="Calculator Project">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="portfolio-title">Random Quote Machine</h3>
+                                <p>A generator that unviels a new inspiring and famous quote with every click.</p>
+                                <i class="fas fa-external-link-square-alt"></i>
+                                <button data-mfp-src="#rqg-wrapper"
                                     class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
                         <div class="hide portfolio-item ds">
                             <div class="image-box">
-                                <img src="assets/images/portfolio/Scatter_Plot.png" width="460.8" height="465.41" alt="Calculator Project">
+                                <img src="assets/images/portfolio/Heat_Map.png" width="460.8" height="465.41" alt="Calculator Project">
                             </div>
                             <div class="content-box">
-                                <h3 class="portfolio-title">D3 Scatter Plot</h3>
-                                <p>Details soon!</p>
+                                <h3 class="portfolio-title">D3.js Heat Map</h3>
+                                <p>A heat map that displays the monthly global land-surface temperature over the span of 263 years.</p>
                                 <i class="fas fa-external-link-square-alt"></i>
-                                <button data-mfp-src="#portfolio-wrapper"
+                                <button data-mfp-src="#sp-wrapper"
                                     class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
@@ -397,16 +411,16 @@
                                 <img src="assets/images/portfolio/Bar_Chart.png" width="460.8" height="465.41" alt="Calculator Project">
                             </div>
                             <div class="content-box">
-                                <h3 class="portfolio-title">D3 Bar Chart</h3>
-                                <p>Details soon!</p>
+                                <h3 class="portfolio-title">D3.js Bar Chart</h3>
+                                <p>A bar chart that displays the United State's GDP over the span of 70 years.</p>
                                 <i class="fas fa-external-link-square-alt"></i>
-                                <button data-mfp-src="#portfolio-wrapper"
+                                <button data-mfp-src="#bc-wrapper"
                                     class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
                         
                     </div>
-                    <div class="show-more"><button class="ar-btn-primary">Show All</button></div>
+                    <div class="show-more"><button class="ar-btn-primary">Show More</button></div>
                 </div>
             </div>
         </div>          
@@ -649,8 +663,716 @@ for Media and Awareness to increase the safety and integrity of journalists worl
     </footer>
     <!-- FOOTER AREA END -->
 
+
+    <!-- PROJECT MODAL START -->
+    <div id="pomodoro-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+        <div class="popup_modal_img">
+            <img src="./assets/images/portfolio/pomodoro.png" alt="">
+        </div>
+
+        <div class="popup_modal_content">
+            <div class="portfolio_info">
+                <div class="portfolio_info_text">
+                    <h2 class="title">Pomodoro & Task List</h2>
+                    <div class="desc">
+                        <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It uses a kitchen timer to break work into intervals, typically 25 minutes in length, separated by short breaks.</p>
+                    </div>
+                    <a href="https://anasrustom.github.io/Pomodoro/" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio_info_items">
+                    <div class="info_item">
+                        <div class="key">Category</div>
+                        <div class="value">Web App</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Project Type</div>
+                        <div class="value">Personal</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Start Date</div>
+                        <div class="value">November, 2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio_description">
+                <h2 class="title">Project Description</h2>
+                <div class="desc">
+                    <p>The Pomodoro Web App blends JQuery, React.JS,
+                        HTML, CSS, and Javascript, offering a
+                        robust study tool. With features like a
+                        smooth toggle for white noise, sound
+                        options, volume control, and customizable
+                        app themes, it significantly optimizes
+                        study sessions. Furthermore, it has a
+                        dynamic task list feature allowing
+                        seamless task editing, addition, and
+                        deletion. Benefiting over 10 students, it
+                        stands as a testament to efficient time
+                        management and enhanced productivity
+                        in academic pursuits.</p>
+                </div>
+            </div>
+            <div class="portfolio_description tech">
+                <h2 class="title">Tech Used</h2>
+                <div class="language__list">
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/HTML.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">HTML</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/CSS.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">CSS</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/JS.svg" alt="" class="language__img">
+                        <span class="language__name">JavaScript</span>
+                      </figure>
+                    </div>
+                    <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/React.png" alt="" class="language__img">
+                          <span class="language__name">React.JS</span>
+                        </figure>
+                      </div>
+                      <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/JQuery.png" alt="" class="language__img">
+                          <span class="language__name">JQuery</span>
+                        </figure>
+                      </div>
+                </div>
+            </div>
+
+
+
+            <div class="portfolio_navigation">
+                <div class="navigation_item prev-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label"></div>
+                            <h3 class="title"></h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="navigation_item next-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Next Project:</div>
+                            <h3 class="title">UltraVerse</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ultraverse-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+        <div class="popup_modal_img">
+            <img src="./assets/images/portfolio/nft.png" alt="">
+        </div>
+
+        <div class="popup_modal_content">
+            <div class="portfolio_info">
+                <div class="portfolio_info_text">
+                    <h2 class="title">UltraVerse NFT Marketplace</h2>
+                    <div class="desc">
+                        <p>
+                            NFT marketplaces are specialized platforms that facilitate the buying, selling, and creation of Non-Fungible Tokens (NFTs), which are unique digital assets representing ownership of distinct and scarce items, both tangible and intangible.
+                        </p>
+                    </div>
+                    <a href="https://anasrustom.github.io/NFTMarketPlace/" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio_info_items">
+                    <div class="info_item">
+                        <div class="key">Category</div>
+                        <div class="value">Website</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Project Type</div>
+                        <div class="value">Personal</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Start Date</div>
+                        <div class="value">January, 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio_description">
+                <h2 class="title">Project Description</h2>
+                <div class="desc">
+                    <p>Ultraverse, my React.js masterpiece, is a
+                        cutting-edge NFT marketplace born from
+                        the Front-End Simplified course. It's a
+                        responsive NFT marketplace where users
+                        seamlessly explore NFTs, filter based on
+                        preferences, and discover trending
+                        collections, top creators, and new
+                        releases. Thanks to collaborative
+                        debugging with Front-End Simplified
+                        interns, Ultraverse offers a sleek, userfriendly experience. Some features
+                        include the ability to follow favorite
+                        creators and view individual NFT details,
+                        making it a dynamic and engaging
+                        marketplace.</p>
+                </div>
+            </div>
+            <div class="portfolio_description tech">
+                <h2 class="title">Tech Used</h2>
+                <div class="language__list">
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/HTML.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">HTML</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/CSS.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">CSS</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/JS.svg" alt="" class="language__img">
+                        <span class="language__name">JavaScript</span>
+                      </figure>
+                    </div>
+                    <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/React.png" alt="" class="language__img">
+                          <span class="language__name">React.JS</span>
+                        </figure>
+                      </div>
+                      <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/bootstrap.png" alt="" class="language__img">
+                          <span class="language__name">Bootstrap</span>
+                        </figure>
+                      </div>
+                </div>
+            </div>
+
+        <div class="portfolio_navigation">
+                <div class="navigation_item prev-project">
+                    <a class="project" data-mfp-src="#pomodoro-wrapper">
+                        <div class="nav_project">
+                            <div class="label">Previous Project:</div>
+                            <h3 class="title">Pomodoro</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="navigation_item next-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Next Project:</div>
+                            <h3 class="title">TicTacToe AI</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tictactoe-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+        <div class="popup_modal_img">
+            <img src="./assets/images/portfolio/tictactoe.png" alt="">
+        </div>
+
+        <div class="popup_modal_content">
+            <div class="portfolio_info">
+                <div class="portfolio_info_text">
+                    <h2 class="title">Impossible level TicTacToe AI</h2>
+                    <div class="desc">
+                        <p>
+                            A simple TicTacToe game where you can play against an AI that is impossible to beat.
+                        </p>
+                    </div>
+                    <a href="https://anasrustom.github.io/anastictactoe" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio_info_items">
+                    <div class="info_item">
+                        <div class="key">Category</div>
+                        <div class="value">AI</div>
+                        <div class="value">Game</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Project Type</div>
+                        <div class="value">Personal</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Start Date</div>
+                        <div class="value">April, 2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio_description">
+                <h2 class="title">Project Description</h2>
+                <div class="desc">
+                    <p>Explore my personal project, the
+                        "Impossible-To-Beat TicTacToe" web game. In this
+                        innovative creation, players consistently
+                        initiate the game against an AI that either
+                        secures a tie or wins. Leveraging strategic
+                        algorithms, this project showcases my
+                        skills in game development, artificial
+                        intelligence, and web design. The app
+                        offers an engaging and challenging
+                        experience, reflecting my commitment to
+                        pushing boundaries in web development
+                        and creating unique, unbeatable gaming
+                        solutions.</p>
+                </div>
+            </div>
+            <div class="portfolio_description tech">
+                <h2 class="title">Tech Used</h2>
+                <div class="language__list">
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/HTML.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">HTML</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/CSS.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">CSS</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/JS.svg" alt="" class="language__img">
+                        <span class="language__name">JavaScript</span>
+                      </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio_navigation">
+                <div class="navigation_item prev-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Previous Project:</div>
+                            <h3 class="title">UltraVerse</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="navigation_item next-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Next Project:</div>
+                            <h3 class="title">AR Calculator</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="calculator-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+        <div class="popup_modal_img">
+            <img src="./assets/images/portfolio/Calculator.png" alt="">
+        </div>
+
+        <div class="popup_modal_content">
+            <div class="portfolio_info">
+                <div class="portfolio_info_text">
+                    <h2 class="title">Calculator</h2>
+                    <div class="desc">
+                        <p>
+                            This React calculator with useReducer tackles complex operations and offers smooth keyboard or mouse input for a powerful user experience.
+                        </p>
+                    </div>
+                    <a href="https://anasrustom.github.io/Calculator" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio_info_items">
+                    <div class="info_item">
+                        <div class="key">Category</div>
+                        <div class="value">Web App</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Project Type</div>
+                        <div class="value">Personal</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Start Date</div>
+                        <div class="value">December, 2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio_description">
+                <h2 class="title">Project Description</h2>
+                <div class="desc">
+                    <p>Incorporating React's useReducer, the
+                        Calculator Web App is a powerful tool for
+                        handling operations efficiently made with
+                        JQuery, React.JS, CSS, HTML, and
+                        Javascript. With support for both
+                        keypresses and mouse input, this
+                        application provides a seamless and
+                        responsive user experience. Discover a
+                        state-of-the-art calculator that leverages
+                        React's capabilities to enhance
+                        functionality and usability</p>
+                </div>
+            </div>
+            <div class="portfolio_description tech">
+                <h2 class="title">Tech Used</h2>
+                <div class="language__list">
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/HTML.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">HTML</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/CSS.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">CSS</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/JS.svg" alt="" class="language__img">
+                        <span class="language__name">JavaScript</span>
+                      </figure>
+                    </div>
+                    <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/React.png" alt="" class="language__img">
+                          <span class="language__name">React.JS</span>
+                        </figure>
+                      </div>
+                      <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/JQuery.png" alt="" class="language__img">
+                          <span class="language__name">JQuery</span>
+                        </figure>
+                      </div>
+                </div>
+            </div>
+
+            <div class="portfolio_navigation">
+                <div class="navigation_item prev-project">
+                    <a  class="project">
+                        <div class="nav_project">
+                            <div class="label">Previous Project:</div>
+                            <h3 class="title">ITB TicTacToe</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="navigation_item next-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Next Project:</div>
+                            <h3 class="title">Random Quote Machine</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="rqg-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+        <div class="popup_modal_img">
+            <img src="./assets/images/portfolio/RQG.png" alt="">
+        </div>
+
+        <div class="popup_modal_content">
+            <div class="portfolio_info">
+                <div class="portfolio_info_text">
+                    <h2 class="title">Random Quote Machine</h2>
+                    <div class="desc">
+                        <p>
+                            A machine that unviels a new inspiring and famous quote with every click.
+                        </p>
+                    </div>
+                    <a href="https://anasrustom.github.io/RandomQuoteMachine" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio_info_items">
+                    <div class="info_item">
+                        <div class="key">Category</div>
+                        <div class="value">Web App</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Project Type</div>
+                        <div class="value">Personal</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Start Date</div>
+                        <div class="value">November, 2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio_description">
+                <h2 class="title">Project Description</h2>
+                <div class="desc">
+                    <p>Dive into my "Random Quote Machine"
+                        project — a
+                        visually striking, responsive web design
+                        that delivers inspiration with every click. Explore a curated collection of
+                        quotes by famous figures, dynamically
+                        generated at the touch of a button. The
+                        added feature lets users effortlessly share
+                        their favorite quotes on Twitter or Tumblr,
+                        adding a social dimension to this engaging
+                        and user-friendly project. Witness my
+                        commitment to creating not just
+                        functional but aesthetically pleasing web
+                        experiences.
+                        </p>
+                </div>
+            </div>
+            <div class="portfolio_description tech">
+                <h2 class="title">Tech Used</h2>
+                <div class="language__list">
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/HTML.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">HTML</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/CSS.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">CSS</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/JS.svg" alt="" class="language__img">
+                        <span class="language__name">JavaScript</span>
+                      </figure>
+                    </div>
+                    <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/React.png" alt="" class="language__img">
+                          <span class="language__name">React.JS</span>
+                        </figure>
+                      </div>
+                </div>
+            </div>
+
+            <div class="portfolio_navigation">
+                <div class="navigation_item prev-project">
+                    <a  class="project">
+                        <div class="nav_project">
+                            <div class="label">Previous Project:</div>
+                            <h3 class="title">Calculator</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="navigation_item next-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Next Project:</div>
+                            <h3 class="title">D3 Heat Map</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sp-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+        <div class="popup_modal_img">
+            <img src="./assets/images/portfolio/Heat_Map.png" alt="">
+        </div>
+
+        <div class="popup_modal_content">
+            <div class="portfolio_info">
+                <div class="portfolio_info_text">
+                    <h2 class="title">D3.js Heat Map</h2>
+                    <div class="desc">
+                        <p>
+                            A data visualization heatmap is a like a colorful grid that uses intensity of color to represent values in a dataset.
+                        </p>
+                    </div>
+                    <a href="https://anasrustom.github.io/Heat-Map" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio_info_items">
+                    <div class="info_item">
+                        <div class="key">Category</div>
+                        <div class="value">Data Visualization</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Project Type</div>
+                        <div class="value">Personal</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Start Date</div>
+                        <div class="value">March, 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio_description">
+                <h2 class="title">Project Description</h2>
+                <div class="desc">
+                    <p>Delve into Earth's climate history with this interactive D3.js heatmap. Unveiling a hidden dimension of time, it visualizes the subtle variations in monthly land temperatures across the globe, spanning a staggering 263 years (1753-2015). Witness the ebb and flow of our planet's thermal fingerprint, and uncover potential trends hidden within the vast tapestry of climate data.</p>
+                </div>
+            </div>
+            <div class="portfolio_description tech">
+                <h2 class="title">Tech Used</h2>
+                <div class="language__list">
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/HTML.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">HTML</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/CSS.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">CSS</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/JS.svg" alt="" class="language__img">
+                        <span class="language__name">JavaScript</span>
+                      </figure>
+                    </div>
+                    <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/d3-logo.png" alt="" class="language__img">
+                          <span class="language__name">D3.js</span>
+                        </figure>
+                      </div>
+
+                </div>
+            </div>
+
+            <div class="portfolio_navigation">
+                <div class="navigation_item prev-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Previous Project: </div>
+                            <h3 class="title">Random Quote Machine</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="navigation_item next-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Next Project:</div>
+                            <h3 class="title">D3 Bar Chart</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bc-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+        <div class="popup_modal_img">
+            <img src="./assets/images/portfolio/Bar_Chart.png" alt="">
+        </div>
+
+        <div class="popup_modal_content">
+            <div class="portfolio_info">
+                <div class="portfolio_info_text">
+                    <h2 class="title">D3.js Bar Chart</h2>
+                    <div class="desc">
+                        <p>
+                            A data visualization bar chart is a graph that uses rectangular bars to represent values in a dataset. Each bar's length is proportional to the value it represents, allowing for easy comparison between different categories.
+                        </p>
+                    </div>
+                    <a href="https://anasrustom.github.io/Bar-Chart" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio_info_items">
+                    <div class="info_item">
+                        <div class="key">Category</div>
+                        <div class="value">Data Visualization</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Project Type</div>
+                        <div class="value">Personal</div>
+                    </div>
+                    <div class="info_item">
+                        <div class="key">Start Date</div>
+                        <div class="value">March, 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio_description">
+                <h2 class="title">Project Description</h2>
+                <div class="desc">
+                    <p>Explore the rise of a nation through this dynamic D3.js bar chart.  Unveiling the story of American economic expansion, it translates raw data into a visually compelling narrative, showcasing the United States' Gross Domestic Product (GDP) from 1946 to 2015.  Each bar represents a year, its height revealing the economic pulse of the nation.  This interactive visualization offers a glimpse into decades of growth, prosperity, and potential turning points in the American economic story.</p>
+                </div>
+            </div>
+            <div class="portfolio_description tech">
+                <h2 class="title">Tech Used</h2>
+                <div class="language__list">
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/HTML.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">HTML</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/CSS.svg" alt="" class="language__img">
+                      </figure>
+                      <span class="language__name">CSS</span>
+                    </div>
+                    <div class="language">
+                      <figure class="language__img--wrapper">
+                        <img src="assets/images/icons/JS.svg" alt="" class="language__img">
+                        <span class="language__name">JavaScript</span>
+                      </figure>
+                    </div>
+                    <div class="language">
+                        <figure class="language__img--wrapper">
+                          <img src="assets/images/icons/d3-logo.png" alt="" class="language__img">
+                          <span class="language__name">D3.JS</span>
+                        </figure>
+                      </div>
+                </div>
+            </div>
+
+            <div class="portfolio_navigation">
+                <div class="navigation_item prev-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label">Previous Project: </div>
+                            <h3 class="title">D3 Heat Map</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="navigation_item next-project">
+                    <a class="project">
+                        <div class="nav_project">
+                            <div class="label"></div>
+                            <h3 class="title"></h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PROJECT MODAL END -->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/textanimation.js"></script>

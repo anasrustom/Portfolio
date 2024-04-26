@@ -2,8 +2,19 @@
 (function ($) {
     "use strict";
 
+	// $("[data-bg-image]").each(function () {
+	// 	$(this).css(
+	// 		"background-image",
+	// 		"url(" + $(this).attr("data-bg-image") + ")"
+	// 	);
+	// });
+
+	// $("[data-bg-color]").each(function () {
+	// 	$(this).css("background-color", $(this).attr("data-bg-color"));
+	// });
+
 	$(document).ready(function ($) {
-		
+	
   	// Sticky Header
 
 		var lastScrollTop = 0;
@@ -39,6 +50,16 @@
 			$("body").removeClass("overflow-hidden");
 		});
    
+
+	// Hero fixer
+		$(document).ready(function() {
+			if ($(window).width() <= 768) {
+				$('#cd-headline').removeClass('rotate-1');
+				$('#main-detail').removeClass('is-visible');
+				$('.is-hidden').hide();
+			}
+		});
+
 	// PROJECT SLIDER 
 		var $grid = $(".portfolio-box").isotope({
 			// options
@@ -74,13 +95,18 @@
 		});
 
 		$(".show-more").on("click", function () {
-			// Remove the "hide" class from all items
-			$(".portfolio-item").removeClass("hide");
+			// Select the first two hidden items and remove the "hide" class
+			var filterValue = $(".filter-button-group button.active").attr("data-filter");
+			var hiddenItems = $(".portfolio-item" + filterValue + ":hidden").slice(0, 2);
+			hiddenItems.removeClass("hide");
 		
 			// Reapply the Isotope filter
-			var filterValue = $(".filter-button-group button.active").attr("data-filter");
 			$grid.isotope({ filter: filterValue });
-			$(".show-more").addClass("hide");
+		
+			// If there are no more hidden items, hide the "show-more" button
+			if ($(".portfolio-item" + filterValue + ":hidden").length == 0) {
+				$(".show-more").addClass("hide");
+			}
 		});
 	// Project Filter BG Color
 		function filter_animation() {
@@ -107,7 +133,19 @@
 				.addClass(".portfolio-filter .button-group");
 			active_bg.css({ left: leftOff - menuLeft + "px", width: width + "px" });
 		}
-    
+
+	// ALL POPUP 
+		$(".modal-popup").magnificPopup({
+			type: "inline",
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: "auto",
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: "popup-mfp",
+		});
     
     });
 
