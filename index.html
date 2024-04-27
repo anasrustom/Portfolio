@@ -166,7 +166,7 @@
                             </p>
                         <p class="lead2 wow fadeInUp"> that loves crafting beautiful user experiences and learning new skills. 
                             
-                            <div class="hero-image-box d-md-none text-center">
+                            <div data-metric-name="my-image" class="hero-image-box d-md-none text-center">
                                 <img src="assets/images/me.png" alt="">
                             </div>
                         <p class="lead2 wow fadeInUp">I am also an honors Computer Science student at Qatar University, consistently acing academics with a perfect 4.0 GPA and earning Dean's List recognition.</p></p>
@@ -175,11 +175,11 @@
 
 
                         <div class="button-box wow fadeInUp">
-                           <div> <a href="/assets/CV.pdf" target="_blank" download class="ar-btn-secondary">Download CV <i class="fas fa-download"></i></a>
+                           <div> <a data-metric-name="CV-button" href="/assets/CV.pdf" target="_blank" download class="ar-btn-secondary">Download CV <i class="fas fa-download"></i></a>
                             <p class="upcoming-cv d-none d-lg-block">Updated CV  will arrive July 26th</p></div>
                             <ul class="ul-reset social-icons">
-                                <li><a href="https://www.linkedin.com/in/anas-rustom-6b09632a2/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="https://github.com/anasrustom" target="_blank"><i class="fab fa-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/anas-rustom-6b09632a2/" target="_blank" data-metric-name="linkedin-button"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a  href="https://github.com/anasrustom" target="_blank" data-metric-name="github-button"><i class="fab fa-github"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -197,7 +197,7 @@
     <!-- HERO SECTION END  -->
 
     <!-- SKILLS SECTION START -->
-    <section class="skills-section" id="skills-section">
+    <section data-metric-name="skills-section" class="skills-section" id="skills-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -303,7 +303,7 @@
     <!-- SKILLS SECTION END -->
 
     <!-- PROJECTS SECTION START -->
-    <section class="portfolio-section" id="projects-section">
+    <section class="portfolio-section" id="projects-section" data-metric-name="projects-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -316,7 +316,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
+                    <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s" data-metric-name="project-filter">
                         <div class="button-group filter-button-group">
                             <button data-filter="*" class="active">All</button>
                             <button data-filter=".react">React.JS</button>
@@ -327,10 +327,10 @@
                         </div>
                     </div>
 
-                    <div class="portfolio-box">
+                    <div class="portfolio-box" data-metric-name="all-projects">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div>
-                        <div class="portfolio-item react web-app">
+                        <div class="portfolio-item react web-app" data-metric-name="pomodoro-project">
                             <div class="image-box">
                                 <img src="assets/images/portfolio/pomodoro.png" width="460.8" height="465.41" alt="Pomodoro Project">
                             </div>
@@ -344,7 +344,7 @@
 
                         </div>
 
-                        <div class="portfolio-item react">
+                        <div class="portfolio-item react" data-metric-name="ultraverse-project">
                             <div class="image-box">
                                 <img src="assets/images/portfolio/nft.png" width="460.8" height="465.41" alt="UltraVerse Project">
                             </div>
@@ -357,7 +357,7 @@
                             </div>
                         </div>
 
-                        <div class="portfolio-item ai">
+                        <div class="portfolio-item ai" data-metric-name="ttt-project">
                             <div class="image-box">
                                 <img src="assets/images/portfolio/tictactoe.png" width="460.8" height="465.41" alt="tictactoe Project">
                             </div>
@@ -370,7 +370,7 @@
                             </div>
                         </div>
 
-                        <div class="portfolio-item react web-app">
+                        <div class="portfolio-item react web-app" data-metric-name="calculator-project">
                             <div class="image-box">
                                 <img src="assets/images/portfolio/Calculator.png" width="460.8" height="465.41" alt="Calculator Project">
                             </div>
@@ -384,7 +384,7 @@
                         </div>
                         <div class="hide portfolio-item react web-app">
                             <div class="image-box">
-                                <img src="assets/images/portfolio/RQG.png" width="460.8" height="465.41" alt="Calculator Project">
+                                <img src="assets/images/portfolio/RQG.png" width="460.8" height="465.41" alt="RQG Project">
                             </div>
                             <div class="content-box">
                                 <h3 class="portfolio-title">Random Quote Machine</h3>
@@ -396,7 +396,7 @@
                         </div>
                         <div class="hide portfolio-item ds">
                             <div class="image-box">
-                                <img src="assets/images/portfolio/Heat_Map.png" width="460.8" height="465.41" alt="Calculator Project">
+                                <img src="assets/images/portfolio/Heat_Map.png" width="460.8" height="465.41" alt="">
                             </div>
                             <div class="content-box">
                                 <h3 class="portfolio-title">D3.js Heat Map</h3>
@@ -408,7 +408,7 @@
                         </div>
                         <div class="hide portfolio-item ds">
                             <div class="image-box">
-                                <img src="assets/images/portfolio/Bar_Chart.png" width="460.8" height="465.41" alt="Calculator Project">
+                                <img src="assets/images/portfolio/Bar_Chart.png" width="460.8" height="465.41" alt="">
                             </div>
                             <div class="content-box">
                                 <h3 class="portfolio-title">D3.js Bar Chart</h3>
@@ -461,7 +461,7 @@
                                 Handpicked by the CSE department to be part of the core team for the upcoming ACM Chapter in Qatar University, and currently running for Chair.
                             </div>
                         </div>
-                        <a title="Click me!" class="resume-item wow fadeInLeft" data-wow-delay=".5s" href="https://anasrustom.github.io/lifelines/" target="_blank">
+                        <a title="Click me!" class="resume-item wow fadeInLeft" data-wow-delay=".5s" href="https://anasrustom.github.io/lifelines/" target="_blank" data-metric-name="hackathon-button">
                             <div class="time">
                                 FEB 2024 <span class="clickable">Click me!</span>
                             </div>
@@ -478,7 +478,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                         <h2 class="section-title purple-grad">&nbsp;</h2>
                     </div>
                     <div class="resume-widget">
-                    <div title="Click me!" class="resume-item wow fadeInLeft" data-wow-delay=".4s" >
+                    <div class="resume-item wow fadeInLeft" data-wow-delay=".4s" >
                             <div class="time">
                                 2023 - 2024
                             </div>
@@ -487,7 +487,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                                 Demonstrated leadership skills as the Head of Admins for Run For events such as: Gaza by Qatar Foundation, NorthWestern MUN, and QU Happiness Day.
                             </div>
                     </div>
-                    <a title="Click me!" class="resume-item wow fadeInLeft" data-wow-delay=".5s" href="https://www.codechef.com/users/anasr" target="_blank">
+                    <a title="Click me!" class="resume-item wow fadeInLeft" data-wow-delay=".5s" href="https://www.codechef.com/users/anasr" target="_blank" data-metric-name="codechef-button">
                         <div class="time">
                             DEC 2023 <span class="clickable">Click me!</span>
                         </div>
@@ -574,7 +574,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                                     <div class="col-sm-12">
                                         <div class="form_group">
                                             <input type="email" name="email" 
-                                                placeholder="Email address" autocomplete="off" required>
+                                                placeholder="Email address" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -624,7 +624,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                                 </div>
                                 <div class="text-box">
                                     <p>LinkedIn</p>
-                                    <a href="https://www.linkedin.com/in/anas-rustom-6b09632a2/" target="_blank">Anas Rustom</a>
+                                    <a href="https://www.linkedin.com/in/anas-rustom-6b09632a2/" target="_blank" data-metric-name="linkedin-button">Anas Rustom</a>
                                 </div>
                             </li>
                         </ul>
@@ -665,7 +665,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
 
 
     <!-- PROJECT MODAL START -->
-    <div id="pomodoro-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+    <div id="pomodoro-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-metric-name="pomodoro-project-modal">
         <div class="popup_modal_img">
             <img src="./assets/images/portfolio/pomodoro.png" alt="">
         </div>
@@ -677,7 +677,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                     <div class="desc">
                         <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It uses a kitchen timer to break work into intervals, typically 25 minutes in length, separated by short breaks.</p>
                     </div>
-                    <a href="https://anasrustom.github.io/Pomodoro/" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://anasrustom.github.io/Pomodoro/" target="_blank" class="ar-btn-primary" data-metric-name="pomodoro-live">live preview <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="portfolio_info_items">
                     <div class="info_item">
@@ -773,7 +773,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
         </div>
     </div>
 
-    <div id="ultraverse-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+    <div id="ultraverse-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-metric-name="ultraverse-project-modal">
         <div class="popup_modal_img">
             <img src="./assets/images/portfolio/nft.png" alt="">
         </div>
@@ -787,7 +787,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                             NFT marketplaces are specialized platforms that facilitate the buying, selling, and creation of Non-Fungible Tokens (NFTs), which are unique digital assets representing ownership of distinct and scarce items, both tangible and intangible.
                         </p>
                     </div>
-                    <a href="https://anasrustom.github.io/NFTMarketPlace/" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://anasrustom.github.io/NFTMarketPlace/" target="_blank" class="ar-btn-primary" data-metric-name="ultra-live">live preview <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="portfolio_info_items">
                     <div class="info_item">
@@ -882,7 +882,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
         </div>
     </div>
 
-    <div id="tictactoe-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+    <div id="tictactoe-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-metric-name="ttt-project-modal">
         <div class="popup_modal_img">
             <img src="./assets/images/portfolio/tictactoe.png" alt="">
         </div>
@@ -896,7 +896,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                             A simple TicTacToe game where you can play against an AI that is impossible to beat.
                         </p>
                     </div>
-                    <a href="https://anasrustom.github.io/anastictactoe" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://anasrustom.github.io/anastictactoe" target="_blank" class="ar-btn-primary" data-metric-name="ttt-live">live preview <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="portfolio_info_items">
                     <div class="info_item">
@@ -979,7 +979,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
         </div>
     </div>
 
-    <div id="calculator-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+    <div id="calculator-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-metric-name="calculator-project-modal">
         <div class="popup_modal_img">
             <img src="./assets/images/portfolio/Calculator.png" alt="">
         </div>
@@ -993,7 +993,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                             This React calculator with useReducer tackles complex operations and offers smooth keyboard or mouse input for a powerful user experience.
                         </p>
                     </div>
-                    <a href="https://anasrustom.github.io/Calculator" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://anasrustom.github.io/Calculator" target="_blank" class="ar-btn-primary" data-metric-name="calculator-live">live preview <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="portfolio_info_items">
                     <div class="info_item">
@@ -1371,6 +1371,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
     <!-- PROJECT MODAL END -->
 
     <script src="assets/js/jquery.min.js"></script>
+    <script src="https://metric.qcri.org/tracking/js?id=f9cvhzt0"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     <script src="assets/js/magnific-popup.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
