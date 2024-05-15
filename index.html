@@ -82,10 +82,10 @@
                     <div class="header-menu">
                         <nav>
                             <ul>
-                                <li><a href="#about-section">About</a></li>
-                                <li><a href="#skills-section">Skills</a></li>
-                                <li><a href="#projects-section">Projects</a></li>
-                                <li><a href="#resume-section">Resume</a></li>
+                                <li><a href="#about-section" data-metric-name="about-section-button">About</a></li>
+                                <li><a href="#skills-section" data-metric-name="skills-section-button">Skills</a></li>
+                                <li><a href="#projects-section" data-metric-name="projects-section-button">Projects</a></li>
+                                <li><a href="#resume-section" data-metric-name="resume-section-button">Resume</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -94,7 +94,7 @@
                         <a href="#contact-section" class="ar-btn-primary">Contact me!</a>
                     </div>
 
-                    <div class="menu-bar">
+                    <div class="menu-bar" data-metric-name="hamburger-menu">
                         <button>
                             <span></span>
                             <span></span>
@@ -124,10 +124,10 @@
                     <div class="header-menu">
                         <nav>
                             <ul>
-                                <li><a href="#about-section">About</a></li>
-                                <li><a href="#skills-section">Skills</a></li>
-                                <li><a href="#projects-section">Projects</a></li>
-                                <li><a href="#resume-section">Resume</a></li>
+                                <li><a href="#about-section" data-metric-name="about-section-button">About</a></li>
+                                <li><a href="#skills-section" data-metric-name="skills-section-button">Skills</a></li>
+                                <li><a href="#projects-section" data-metric-name="projects-section-button">Projects</a></li>
+                                <li><a href="#resume-section" data-metric-name="resume-section-button">Resume</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -136,7 +136,7 @@
                         <a href="#contact-section" class="ar-btn-primary">Contact me!</a>
                     </div>
 
-                    <div class="menu-bar">
+                    <div class="menu-bar" data-metric-name="hamburger-menu">
                         <button>
                             <span></span>
                             <span></span>
@@ -328,11 +328,11 @@
                 <div class="col-md-12">
                     <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s" data-metric-name="project-filter">
                         <div class="button-group filter-button-group">
-                            <button data-filter="*" class="active">All</button>
-                            <button data-filter=".react">React.JS</button>
-                            <button data-filter=".ai">AI</button>
-                            <button data-filter=".web-app">Web Apps</button>
-                            <button data-filter=".ds" class="d-none d-md-inline">Data Visualization</button>
+                            <button data-filter="*" class="active" data-metric-name="all-projects-filter">All</button>
+                            <button data-filter=".react" data-metric-name="react-projects-filter">React.JS</button>
+                            <button data-filter=".ai" data-metric-name="AI-projects-filter">AI</button>
+                            <button data-filter=".web-app" data-metric-name="webapp-projects-filter">Web Apps</button>
+                            <button data-filter=".ds" class="d-none d-md-inline" data-metric-name="DV-projects-filter">Data Visualization</button>
                             <div class="active-bg"></div>
                         </div>
                     </div>
@@ -392,7 +392,7 @@
                                     class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
-                        <div class="hide portfolio-item react web-app">
+                        <div class="hide portfolio-item react web-app" data-metric-name="quote-project">
                             <div class="image-box">
                                 <img src="assets/images/portfolio/RQG.png" width="460.8" height="465.41" alt="RQG Project">
                             </div>
@@ -404,7 +404,7 @@
                                     class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
-                        <div class="hide portfolio-item ds">
+                        <div class="hide portfolio-item ds" data-metric-name="heatmap-project">
                             <div class="image-box">
                                 <img src="assets/images/portfolio/Heat_Map.png" width="460.8" height="465.41" alt="">
                             </div>
@@ -416,7 +416,7 @@
                                     class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
-                        <div class="hide portfolio-item ds">
+                        <div class="hide portfolio-item ds" data-metric-name="barchart-project">
                             <div class="image-box">
                                 <img src="assets/images/portfolio/Bar_Chart.png" width="460.8" height="465.41" alt="">
                             </div>
@@ -438,7 +438,7 @@
     <!-- PROJECTS SECTION END -->
 
     <!-- RESUME SECTION START  -->
-    <section class="resume-section" id="resume-section">
+    <section class="resume-section" id="resume-section" data-metric-name="resume-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -567,7 +567,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
     <!-- RESUME SECTION END  -->
 
     <!-- CONTACT SECTION START -->
-    <section class="contact-section" id="contact-section">
+    <section class="contact-section" id="contact-section" data-metric-name="contact-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-7 order-2 order-md-1">
@@ -584,30 +584,30 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                                     <div class="col-sm-6">
                                         <div class="form_group">
                                             <input type="text" name="Firstname" placeholder="First name"
-                                                autocomplete="off" required>
+                                                autocomplete="off" data-metric-name="firstname-textbox" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form_group">
                                             <input type="text" name="LastName" placeholder="Last name"
-                                                autocomplete="off">
+                                                autocomplete="off" data-metric-name="lastname-textbox">
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form_group">
                                             <input type="email" name="email" 
-                                                placeholder="Email address" autocomplete="off">
+                                                placeholder="Email address" autocomplete="off" data-metric-name="email-textbox">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form_group">
                                             <textarea name="message"
-                                                placeholder="Message" required></textarea>
+                                                placeholder="Message" data-metric-name="message-textbox" required></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form_btn">
-                                            <button type="submit" class="ar-btn-primary">Send Message</button>
+                                            <button type="submit" class="ar-btn-primary" data-metric-name="sendmessage-button">Send Message</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1107,7 +1107,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
         </div>
     </div>
 
-    <div id="rqg-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+    <div id="rqg-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-metric-name="quote-project-modal">
         <div class="popup_modal_img">
             <img src="./assets/images/portfolio/RQG.png" alt="">
         </div>
@@ -1121,7 +1121,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                             A machine that unviels a new inspiring and famous quote with every click.
                         </p>
                     </div>
-                    <a href="https://anasrustom.github.io/RandomQuoteMachine" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://anasrustom.github.io/RandomQuoteMachine" target="_blank" class="ar-btn-primary" data-metric-name="quote-project-live">live preview <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="portfolio_info_items">
                     <div class="info_item">
@@ -1210,7 +1210,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
         </div>
     </div>
 
-    <div id="sp-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+    <div id="sp-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-metric-name="heatmap-project-modal">
         <div class="popup_modal_img">
             <img src="./assets/images/portfolio/Heat_Map.png" alt="">
         </div>
@@ -1224,7 +1224,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                             A data visualization heatmap is a like a colorful grid that uses intensity of color to represent values in a dataset.
                         </p>
                     </div>
-                    <a href="https://anasrustom.github.io/Heat-Map" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://anasrustom.github.io/Heat-Map" target="_blank" class="ar-btn-primary" data-metric-name="heatmap-project-live">live preview <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="portfolio_info_items">
                     <div class="info_item">
@@ -1301,7 +1301,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
         </div>
     </div>
 
-    <div id="bc-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
+    <div id="bc-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-metric-name="barchart-project-modal">
         <div class="popup_modal_img">
             <img src="./assets/images/portfolio/Bar_Chart.png" alt="">
         </div>
@@ -1315,7 +1315,7 @@ for Media and Awareness to increase the safety and integrity of journalists worl
                             A data visualization bar chart is a graph that uses rectangular bars to represent values in a dataset. Each bar's length is proportional to the value it represents, allowing for easy comparison between different categories.
                         </p>
                     </div>
-                    <a href="https://anasrustom.github.io/Bar-Chart" target="_blank" class="ar-btn-primary">live preview <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://anasrustom.github.io/Bar-Chart" target="_blank" class="ar-btn-primary" data-metric-name="barchart-project-live">live preview <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="portfolio_info_items">
                     <div class="info_item">
