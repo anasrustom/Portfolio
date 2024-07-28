@@ -1624,7 +1624,14 @@ a.resume-item:hover {
 	transition: 0.3s;
 }
 
-.resume-widget .resume-item .institute {color: lightgray;}
+.resume-widget .resume-item .institute {
+	color:antiquewhite;
+	margin: 0 0 10px 0;
+	font-style: italic;}
+
+.resume-widget .resume-item .resume-description {
+	color: lightgray;
+}
 .resume-widget .resume-item:before {
 	content: "";
 	position: absolute;
